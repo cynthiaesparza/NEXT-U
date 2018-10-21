@@ -42,9 +42,8 @@ li{
 a{
     color: #FFFFFF;
 }
-a:hover{
-    text-decoration: underline;
-    color: #FFF333;
+a.linkactive{
+    text-decoration: none;
 }
 div.imgs{
     background-color: #82c3a6;
@@ -53,22 +52,49 @@ div.imgs{
 img{
     border: 2px;
     box-shadow: 2px 2px 0px 0px #02010a;
-    background: #d5c75f;
+    background-color: #d5c75f;
     margin: 15px;
 }
 #imgenlace{
     display: flex;
     flex-flow: row nowrap;
 }
+#img2,#img3{
+    border:1px solid black;
+}
 #img2:hover{
     transform: rotate(10deg);
-    border: 2px;
+    border: 2px solid black;
     box-shadow: 2px 2px 0px 0px #82c3a6;
 }
 #img3:hover{
     transform:translate(20px,-5px);
-    border: 2px;
+    border: 2px solid black;
     box-shadow: 2px 2px 0px 0px #C6d5c5;
+}
+footer{
+    clear: both;
+    background-color: #C6d5c5;
+    width: 900px;
+    height: 70px;
+    border-radius: 0px 0px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+#contacto, #termino, #redsoc, #derechos{
+    flex-grow: 1;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+#contacto{
+    text-align: left;
+    padding-left: 15px;
+}
+#derechos{
+    text-align: right;
+    padding-right: 15px;
 }
 @media all and (max-width: 899px) {
     #nombsitio{
@@ -102,6 +128,13 @@ img{
     div.contenido,footer{
         max-width: 100%;
     }
+    footer{
+        flex-flow: column;
+        height: auto;
+    }
+    #contacto, #termino, #redsoc, #derechos{
+        text-align: center;
+    }
 }
 @media (min-width: 900px) {
     div.contenido,footer{
@@ -116,28 +149,4 @@ img{
         max-width: 90%;
         min-width: 90%;
     }
-}
-footer{
-    clear: both;
-    background-color: #C6d5c5;
-    width: 900px;
-    height: 70px;
-    border-radius: 0px 0px 10px 10px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-flow: row wrap;
-}
-#contacto, #termino, #redsoc, #derechos{
-    flex-grow: 1;
-    margin-top: 5px;
-    vertical-align: middle;
-}
-#contacto{
-    text-align: left;
-    padding-left: 15px;
-}
-#derechos{
-    text-align: right;
-    padding-right: 15px;
 }
