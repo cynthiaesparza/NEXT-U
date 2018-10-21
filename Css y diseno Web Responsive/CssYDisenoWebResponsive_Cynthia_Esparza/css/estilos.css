@@ -14,7 +14,7 @@ header{
     height: 70px;
     border-radius: 10px 10px 0px 0px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 #nombsitio{
     padding-left: 15px;
@@ -22,22 +22,17 @@ header{
     vertical-align: middle;
     text-align: left;
     text-shadow: 2px 2px #02010a;
+    width: 50%;
 }
 nav {
-    height: 100%;
-    flex-grow: 5;
-    vertical-align:baseline;
     text-align: right;
+    width: 48%;
 }
 ul{
-    height: 90%;
     padding-right: 15px;
 }
 li{
     display: inline;
-    margin: 0px 5px;
-    padding: 15px 0px;
-    height: 100%;
 }
 a{
     color: #FFFFFF;
@@ -45,11 +40,14 @@ a{
 a.linkactive{
     text-decoration: none;
 }
+a.email{
+    color: #000000;
+}
 div.imgs{
     background-color: #82c3a6;
     text-align: center;
 }
-img{
+img.images{
     border: 2px;
     box-shadow: 2px 2px 0px 0px #02010a;
     background-color: #d5c75f;
@@ -58,6 +56,13 @@ img{
 #imgenlace{
     display: flex;
     flex-flow: row nowrap;
+    background-color: #d5c75f;
+}
+#imgenlace > a{
+    color: #000000;
+}
+h3{
+    margin-top:0px;
 }
 #img2,#img3{
     border:1px solid black;
@@ -76,7 +81,7 @@ footer{
     clear: both;
     background-color: #C6d5c5;
     width: 900px;
-    height: 70px;
+    height: auto;
     border-radius: 0px 0px 10px 10px;
     margin-left: auto;
     margin-right: auto;
@@ -87,18 +92,20 @@ footer{
     flex-grow: 1;
     margin-top: 5px;
     vertical-align: middle;
+    text-align: left;
 }
 #contacto{
     text-align: left;
     padding-left: 15px;
 }
-#derechos{
-    text-align: right;
-    padding-right: 15px;
+span{
+    font-size: 25px;
+    font-weight: bold;
 }
 @media all and (max-width: 899px) {
-    #nombsitio{
-        font-size: 3.5vw;
+    header{
+        flex-flow: column;
+        height:auto;
     }
     #imgenlace{
         flex-flow: column;
@@ -116,14 +123,14 @@ footer{
     #nombsitio {
         min-height: auto;
         max-height: auto;
-        max-width: 60%;
-        min-width: 60%;
+        max-width: 100%;
+        min-width: 100%;
     }
     nav {
         min-height: auto;
         max-height: auto;
-        max-width: 40%;
-        min-width: 40%;
+        max-width: 100%;
+        min-width: 100%;
     }
     div.contenido,footer{
         max-width: 100%;
@@ -132,16 +139,13 @@ footer{
         flex-flow: column;
         height: auto;
     }
-    #contacto, #termino, #redsoc, #derechos{
+    #nombsitio, nav, #contacto, #termino, #redsoc, #derechos{
         text-align: center;
     }
 }
 @media (min-width: 900px) {
     div.contenido,footer{
         max-width: 900px;
-    }
-    nav{
-        font-size: 1.5vw;
     }
     #img2, #img3 {
         min-height: auto;
